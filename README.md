@@ -75,7 +75,7 @@ At login, BrewVisual opens in the menu bar without a main window or Dock icon wh
 
 ## App Management and administrator access
 
-When upgrading a cask, macOS may require App Management permission. BrewVisual cannot automatically verify its current authorization. It provides guidance in **Settings → Permissions** and explains how to recover after an observed access failure. Use **Open System Management** to open **System Settings → Privacy & Security → App Management** and enable access for BrewVisual. If BrewVisual is missing, add it with **+**.
+Before an action that changes an app cask, BrewVisual may show App Management guidance. macOS may require access to install, update, or remove apps. BrewVisual cannot automatically verify its current authorization. In **Settings → Permissions**, choose **Open App Management** to open **System Settings → Privacy & Security → App Management** and enable BrewVisual. If it is missing, add it with **+**. After a Homebrew access failure, BrewVisual keeps the action and log available for review and offers an explicit retry after the package list is refreshed.
 
 If Homebrew needs `sudo` for a protected installation step, BrewVisual presents a secure administrator password prompt. The password is passed only to `sudo`; it is not stored or included in the command log.
 
