@@ -21,11 +21,13 @@ BrewVisual is available in English and German. Published downloads are signed wi
 ## Features
 
 - Browse installed formulae and casks, discover packages, and manage taps.
-- Browse and search packages from an installed third-party tap.
+- Browse and search packages from an installed third-party tap, with package counts and repository links in a dedicated detail pane.
 - See available updates, library counts, and recent command activity together on the dashboard.
 - Install, uninstall, and upgrade packages from the main window.
 - Pin and unpin installed formulae and casks to control package upgrades.
 - View available updates in the menu bar and upgrade an individual package or all available packages.
+- Open installed Cask apps from the package inspector or context menu.
+- Update the Homebrew-installed BrewVisual app with a version-specific changelog and automatic restart.
 - Inspect package versions, dependencies, caveats, and project links.
 - Follow command and download progress, and review technical output in the command log.
 - Run Homebrew diagnostics and preview cleanup candidates before confirming cleanup.
@@ -48,7 +50,9 @@ The [Homebrew tap](https://github.com/felix-lorenz/homebrew-tap) downloads a ver
 
 ## Update BrewVisual
 
-Quit BrewVisual when no Homebrew command is running, then run:
+When the Homebrew-installed BrewVisual app appears in the update list, choose **Update and restart…** to review the target version and changelog before confirming. BrewVisual closes while its separate updater runs the Homebrew upgrade, then reopens in the previous main-window or menu-bar state. **Upgrade all** updates other packages first and offers BrewVisual as a separate confirmation afterward.
+
+You can also update from Terminal. Quit BrewVisual when no Homebrew command is running, then run:
 
 ```sh
 brew update
@@ -77,7 +81,9 @@ At login, BrewVisual opens in the menu bar without a main window or Dock icon wh
 
 Before an action that changes an app cask, BrewVisual may show App Management guidance. macOS may require access to install, update, or remove apps. BrewVisual cannot automatically verify its current authorization. In **Settings → Permissions**, choose **Open App Management** to open **System Settings → Privacy & Security → App Management** and enable BrewVisual. If it is missing, add it with **+**. After a Homebrew access failure, BrewVisual keeps the action and log available for review and offers an explicit retry after the package list is refreshed.
 
-If Homebrew needs `sudo` for a protected installation step, BrewVisual presents a secure administrator password prompt. The password is passed only to `sudo`; it is not stored or included in the command log.
+If Homebrew needs `sudo` for a protected installation step, BrewVisual presents a secure administrator password prompt naming the app, action, and affected packages. The password is passed only to `sudo`; it is not stored or included in the command log.
+
+The self-update helper has its own signed identity, **BrewVisual Updater**. If an App Management access failure occurs during a self-update, review access for this helper separately; the main app's access does not establish the helper's authorization.
 
 ## Support
 
