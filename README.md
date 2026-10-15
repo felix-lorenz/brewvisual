@@ -22,7 +22,9 @@ BrewVisual is available in English and German. Published downloads are signed wi
 
 - Browse installed formulae and casks, discover packages, and manage taps.
 - Browse and search packages from an installed third-party tap, with package counts and repository links in a dedicated detail pane.
+- Show GitHub owner avatars for supported taps, with cached images and fallback icons.
 - See available updates, library counts, and recent command activity together on the dashboard.
+- Access update checks and Upgrade all together in the dashboard's update card.
 - Install, uninstall, and upgrade packages from the main window.
 - Pin and unpin installed formulae and casks to control package upgrades.
 - View available updates in the menu bar and upgrade an individual package or all available packages.
@@ -30,8 +32,9 @@ BrewVisual is available in English and German. Published downloads are signed wi
 - Update the Homebrew-installed BrewVisual app with a version-specific changelog and automatic restart.
 - Inspect package versions, dependencies, caveats, and project links.
 - Follow command and download progress, and review technical output in the command log.
-- Refresh package lists with the toolbar button, Command-R, or a pull gesture. In Updates, refresh checks sources for new versions; in All, Formulae, and Casks, it reloads existing package information.
+- Refresh package lists with Command-R or a pull gesture; Updates also provides a Reload button beside Upgrade all. In Updates, refresh checks sources for new versions; in All, Formulae, and Casks, it reloads existing package information.
 - Run Homebrew diagnostics and preview cleanup candidates before confirming cleanup.
+- Open Settings from the app menu or Command-comma, with a native category toolbar in a fixed-size window.
 
 ## Requirements
 
