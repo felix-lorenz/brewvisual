@@ -30,6 +30,7 @@ BrewVisual is available in English and German. Published downloads are signed wi
 - Update the Homebrew-installed BrewVisual app with a version-specific changelog and automatic restart.
 - Inspect package versions, dependencies, caveats, and project links.
 - Follow command and download progress, and review technical output in the command log.
+- Refresh package lists with the toolbar button, Command-R, or a pull gesture. In Updates, refresh checks sources for new versions; in All, Formulae, and Casks, it reloads existing package information.
 - Run Homebrew diagnostics and preview cleanup candidates before confirming cleanup.
 
 ## Requirements
