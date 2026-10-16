@@ -32,17 +32,21 @@ BrewVisual is available in English and German. Published downloads are signed wi
 - Update the Homebrew-installed BrewVisual app with a version-specific changelog and automatic restart.
 - Inspect package versions, dependencies, caveats, and project links.
 - Follow command and download progress, and review technical output in the command log.
-- Refresh package lists with Command-R or a pull gesture; Updates also provides a Reload button beside Upgrade all. In Updates, refresh checks sources for new versions; in All, Formulae, and Casks, it reloads existing package information.
+- Refresh with Command-R or the contextual button. Updates checks sources for new versions; package lists reload installed information. Adopt Apps provides Scan again.
 - Run Homebrew diagnostics and preview cleanup candidates before confirming cleanup.
 - Open Settings from the app menu or Command-comma, with a native category toolbar in a fixed-size window.
+- Bring supported existing apps under Homebrew management with Adopt Apps.
+- Review estimated storage use and cleanup potential in Maintenance.
+- Choose Small, Medium, or Large menu bar badge sizes in Settings → General.
+- Display additional CaskFlow icons when local application icons are unavailable, including supported package variants.
 
 ## Requirements
 
 - macOS 27 or later
 - Apple Silicon (arm64)
-- An existing [Homebrew installation](https://brew.sh)
+- [Homebrew](https://brew.sh) for package management; first-run setup can install it if needed
 
-BrewVisual does not install Homebrew for you. New users see a three-step introduction covering Homebrew, permissions, and optional login startup. Homebrew must be available before setup can finish. Existing users keep their preferences and can open the guide through **Review introduction** in **Settings → Permissions**.
+Homebrew is required for package management. If it is missing during first-run setup, BrewVisual can run the official installer, show progress and output, request administrator access when needed, verify the installation, and configure supported shells for new terminal windows. New users see a three-step introduction covering Homebrew, permissions, and optional login startup. Homebrew must be available before setup can finish. Existing users keep their preferences and can open the guide through **Review introduction** in **Settings → Permissions**.
 
 ## Install with Homebrew
 
@@ -77,13 +81,13 @@ In **Settings → General**, launch checks and periodic checks can be enabled in
 
 ## Start at login
 
-Login startup is optional and off for new users. After installing BrewVisual in Applications, enable **Start at login** in the introduction or **Settings → Permissions**. Existing login preferences are preserved. If macOS requires approval, use **Open Login Items settings** in Settings.
+Login startup is optional and off for new users. After installing BrewVisual in Applications, enable **Start at login** in the introduction or **Settings → Permissions**. Existing login preferences are preserved. If macOS requires approval, use **Open Login Items** in Settings.
 
 At login, BrewVisual opens in the menu bar without a main window or Dock icon when Homebrew is available. If Homebrew is missing, open the app manually to follow its installation guidance. Once setup is complete, opening BrewVisual from Finder or Spotlight, or choosing **Open BrewVisual** in the menu bar, shows the main window and Dock icon. Closing all app windows returns it to menu-bar-only operation.
 
 ## App Management and administrator access
 
-Before an action that changes an app cask, BrewVisual may show App Management guidance. macOS may require access to install, update, or remove apps. BrewVisual cannot automatically verify its current authorization. In **Settings → Permissions**, choose **Open App Management** to open **System Settings → Privacy & Security → App Management** and enable BrewVisual. If it is missing, add it with **+**. After a Homebrew access failure, BrewVisual keeps the action and log available for review and offers an explicit retry after the package list is refreshed.
+Before an action that changes an app cask, BrewVisual may show App Management guidance. macOS may require access to install, update, or remove apps. While the App Management card is visible, BrewVisual estimates access using temporary write tests in suitable application bundles. Granted, Not Granted, and Unknown describe this evidence; they do not confirm the global macOS permission setting. In **Settings → Permissions**, choose **Open App Management** to open **System Settings → Privacy & Security → App Management** and enable BrewVisual. If it is missing, add it with **+**. After a Homebrew access failure, BrewVisual keeps the action and log available for review and offers an explicit retry after the package list is refreshed.
 
 If Homebrew needs `sudo` for a protected installation step, BrewVisual presents a secure administrator password prompt naming the app, action, and affected packages. The password is passed only to `sudo`; it is not stored or included in the command log.
 
