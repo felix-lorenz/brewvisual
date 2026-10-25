@@ -1,6 +1,6 @@
 # BrewVisual
 
-## A native Homebrew GUI for macOS — built for casual users and power users alike.
+<h3 align="center">A native Homebrew GUI for macOS — built for casual users and power users alike.</h3>
 
 ![BrewVisual 0.13.0 app catalog](assets/screenshots/catalog-overview.png?v=09cfec39d987)
 
