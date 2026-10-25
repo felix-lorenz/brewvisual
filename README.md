@@ -1,5 +1,7 @@
 # BrewVisual
 
+![BrewVisual 0.13.0 app catalog in English](assets/screenshots/catalog-overview.png?v=09cfec39d987)
+
 **A native Homebrew GUI for macOS — built for casual users and power users alike.**
 
 Find popular apps in a clear, curated catalog, or explore Homebrew’s wider selection of apps, command-line tools, and libraries. Manage your software from one place, with package details, tap support, and Homebrew logs always within reach.
@@ -31,15 +33,15 @@ Prefer a direct download? Get the ZIP from the [latest release](https://github.c
 
 ## Screenshots
 
-![BrewVisual 0.13.0 app catalog in English](assets/screenshots/dashboard.png)
+![BrewVisual 0.13.0 inline package details in English](assets/screenshots/dashboard.png?v=12588a9512ef)
 
-*The curated app catalog in BrewVisual 0.13.0 (English interface).*
+*Package details and installation in BrewVisual 0.13.0 (English interface).*
 
-<img src="assets/screenshots/menu-bar-icon.png" alt="BrewVisual menu-bar icon showing eight available updates" width="35" height="30">
+<img src="assets/screenshots/menu-bar-icon.png?v=b2a34709da2f" alt="BrewVisual menu-bar icon showing eight available updates" width="35" height="30">
 
 *Menu-bar icon in BrewVisual 0.13.0 with eight available updates.*
 
-<img src="assets/screenshots/menu-bar-overlay.png" alt="BrewVisual 0.13.0 menu-bar popover during a bulk upgrade" width="402">
+<img src="assets/screenshots/menu-bar-overlay.png?v=e23308cf36a7" alt="BrewVisual 0.13.0 menu-bar popover during a bulk upgrade" width="402">
 
 *The menu-bar popover during a bulk upgrade in BrewVisual 0.13.0 (English interface).*
 
