@@ -1,106 +1,71 @@
 # BrewVisual
 
-A native macOS interface for managing Homebrew formulae, casks, and taps.
+**A native Homebrew GUI for macOS — built for casual users and power users alike.**
 
-BrewVisual is available in English and German. Published downloads are signed with an Apple Developer ID certificate and notarized by Apple.
+Find popular apps in a clear, curated catalog, or explore Homebrew’s wider selection of apps, command-line tools, and libraries. Manage your software from one place, with package details, tap support, and Homebrew logs always within reach.
 
-## Screenshots
-
-![BrewVisual 0.6.0 dashboard in English](assets/screenshots/dashboard.png)
-
-*Dashboard in BrewVisual 0.6.0 (English interface).*
-
-![BrewVisual 0.6.0 menu bar icon with one available update](assets/screenshots/menu-bar-icon.png)
-
-*Menu bar icon in BrewVisual 0.6.0 with one available update.*
-
-![BrewVisual 0.6.0 menu bar update overlay in English](assets/screenshots/menu-bar-overlay.png)
-
-*Menu bar update overlay in BrewVisual 0.6.0 (English interface).*
-
-## Features
-
-- Browse installed formulae and casks, discover packages, and manage taps.
-- Browse and search packages from an installed third-party tap, with package counts and repository links in a dedicated detail pane.
-- Show GitHub owner avatars for supported taps, with cached images and fallback icons.
-- See available updates, library counts, and recent command activity together on the dashboard.
-- Access update checks and Upgrade all together in the dashboard's update card.
-- Install, uninstall, and upgrade packages from the main window.
-- Pin and unpin installed formulae and casks to control package upgrades.
-- View available updates in the menu bar and upgrade an individual package or all available packages.
-- Open installed Cask apps from the package inspector or context menu.
-- Update the Homebrew-installed BrewVisual app with a version-specific changelog and automatic restart.
-- Inspect package versions, dependencies, caveats, and project links.
-- Follow command and download progress, and review technical output in the command log.
-- Refresh with Command-R or the contextual button. Updates checks sources for new versions; package lists reload installed information. Adopt Apps provides Scan again.
-- Run Homebrew diagnostics and preview cleanup candidates before confirming cleanup.
-- Open Settings from the app menu or Command-comma, with a native category toolbar in a fixed-size window.
-- Bring supported existing apps under Homebrew management with Adopt Apps.
-- Review estimated storage use and cleanup potential in Maintenance.
-- Choose Small, Medium, or Large menu bar badge sizes in Settings → General.
-- Display additional CaskFlow icons when local application icons are unavailable, including supported package variants.
-
-## Requirements
-
-- macOS 27 or later
-- Apple Silicon (arm64)
-- [Homebrew](https://brew.sh) for package management; first-run setup can install it if needed
-
-Homebrew is required for package management. If it is missing during first-run setup, BrewVisual can run the official installer, show progress and output, request administrator access when needed, verify the installation, and configure supported shells for new terminal windows. New users see a three-step introduction covering Homebrew, permissions, and optional login startup. Homebrew must be available before setup can finish. Existing users keep their preferences and can open the guide through **Review introduction** in **Settings → Permissions**.
-
-## Install with Homebrew
+## Install
 
 ```sh
 brew install --cask felix-lorenz/tap/brewvisual
 ```
 
-The [Homebrew tap](https://github.com/felix-lorenz/homebrew-tap) downloads a versioned release archive and verifies its SHA-256 checksum.
+**Requirements:** macOS 27 or later · Apple Silicon · Homebrew
 
-## Update BrewVisual
+BrewVisual is available in English and German. Published downloads are signed with an Apple Developer ID certificate and notarized by Apple.
 
-When the Homebrew-installed BrewVisual app appears in the update list, choose **Update and restart…** to review the target version and changelog before confirming. BrewVisual closes while its separate updater runs the Homebrew upgrade, then reopens in the previous main-window or menu-bar state. **Upgrade all** updates other packages first and offers BrewVisual as a separate confirmation afterward.
+Prefer a direct download? Get the ZIP from the [latest release](https://github.com/felix-lorenz/brewvisual/releases/latest), extract it, and move `BrewVisual.app` to Applications.
 
-You can also update from Terminal. Quit BrewVisual when no Homebrew command is running, then run:
+## Features
 
-```sh
-brew update
-brew upgrade --cask felix-lorenz/tap/brewvisual
-```
+- **A curated app catalog.** Discover popular apps and browse organized categories without having to know package names.
+- **Search beyond the catalog.** Search Homebrew formulae and casks, including software from taps you have added, and install supported packages directly.
+- **Manage apps and tools.** Install, update, remove, and pin packages from a native macOS interface.
+- **Keep updates in view.** Check at launch or on a configurable schedule, see available updates in the menu bar, and choose individual or bulk upgrades.
+- **Homebrew logs always within reach.** Follow live command output and inspect recent operations in Activity.
+- **Tap support.** Add and remove third-party taps and browse packages from your added sources.
+- **Adopt existing apps.** Bring supported apps already on your Mac under Homebrew management.
+- **Maintenance with a preview.** Inspect estimated storage use, run Homebrew diagnostics, and review cleanup candidates before confirming cleanup.
+- **Homebrew setup included.** If Homebrew is missing, first-run setup can install it for you.
+- **No tracking or telemetry.** BrewVisual collects no usage analytics and disables Homebrew analytics for commands it starts.
 
-## Direct download
+## Screenshots
 
-Download the ZIP from the [latest release](https://github.com/felix-lorenz/brewvisual-releases/releases/latest). The release notes include its SHA-256 checksum.
+![BrewVisual 0.13.0 app catalog in English](assets/screenshots/dashboard.png)
 
-Extract the ZIP and move `BrewVisual.app` to Applications. To update a direct installation, quit BrewVisual and replace the existing app with the app from the latest ZIP.
+*The curated app catalog in BrewVisual 0.13.0 (English interface).*
 
-## Package checks and upgrades
+<img src="assets/screenshots/menu-bar-icon.png" alt="BrewVisual menu-bar icon showing eight available updates" width="35" height="30">
 
-By default, BrewVisual checks for updates at launch after any required introduction is complete, and every six hours while it is running. These checks run `brew update` to refresh Homebrew and package metadata; they do not upgrade installed formulae or casks.
+*Menu-bar icon in BrewVisual 0.13.0 with eight available updates.*
 
-In **Settings → General**, launch checks and periodic checks can be enabled independently. The periodic interval accepts whole hours from 1 to 24. You start package installation, removal, and upgrades explicitly, and **Check now** in the menu bar runs an on-demand check.
+<img src="assets/screenshots/menu-bar-overlay.png" alt="BrewVisual 0.13.0 menu-bar popover during a bulk upgrade" width="402">
 
-## Start at login
+*The menu-bar popover during a bulk upgrade in BrewVisual 0.13.0 (English interface).*
 
-Login startup is optional and off for new users. After installing BrewVisual in Applications, enable **Start at login** in the introduction or **Settings → Permissions**. Existing login preferences are preserved. If macOS requires approval, use **Open Login Items** in Settings.
+## Permissions
 
-At login, BrewVisual opens in the menu bar without a main window or Dock icon when Homebrew is available. If Homebrew is missing, open the app manually to follow its installation guidance. Once setup is complete, opening BrewVisual from Finder or Spotlight, or choosing **Open BrewVisual** in the menu bar, shows the main window and Dock icon. Closing all app windows returns it to menu-bar-only operation.
+Depending on the operation, macOS or Homebrew may require:
 
-## App Management and administrator access
+- **App Management access** to install, update, or remove app casks. Enable BrewVisual in **System Settings → Privacy & Security → App Management** when needed. If an update error names **BrewVisual Updater**, review access for that helper separately.
+- **Administrator authorization** for Homebrew setup or protected installation steps. BrewVisual requests your password only when needed, passes it only to `sudo`, and never stores it or includes it in command logs.
 
-Before an action that changes an app cask, BrewVisual may show App Management guidance. macOS may require access to install, update, or remove apps. While the App Management card is visible, BrewVisual estimates access using temporary write tests in suitable application bundles. Granted, Not Granted, and Unknown describe this evidence; they do not confirm the global macOS permission setting. In **Settings → Permissions**, choose **Open App Management** to open **System Settings → Privacy & Security → App Management** and enable BrewVisual. If it is missing, add it with **+**. After a Homebrew access failure, BrewVisual keeps the action and log available for review and offers an explicit retry after the package list is refreshed.
+## Privacy
 
-If Homebrew needs `sudo` for a protected installation step, BrewVisual presents a secure administrator password prompt naming the app, action, and affected packages. The password is passed only to `sudo`; it is not stored or included in the command log.
+BrewVisual does not collect usage analytics or send telemetry. Homebrew analytics are also disabled for commands started by BrewVisual.
 
-The self-update helper has its own signed identity, **BrewVisual Updater**. If an App Management access failure occurs during a self-update, review access for this helper separately; the main app's access does not establish the helper's authorization.
+The app makes network requests to load package and catalog data, icons, release notes, and software downloads. The services involved receive normal connection information, including your IP address.
 
-## Support
+## Feedback and support
 
-Report bugs or request features through [GitHub Issues](https://github.com/felix-lorenz/brewvisual-releases/issues). Include your BrewVisual, macOS, and Homebrew versions, steps to reproduce the problem, and relevant command output. Remove personal information from screenshots and logs before sharing them.
+Enjoy using BrewVisual? Please [give the project a star on GitHub](https://github.com/felix-lorenz/brewvisual).
 
-You can also support BrewVisual's development on [Ko-fi](https://ko-fi.com/felixlorenz). The sidebar's **Support me on Ko-fi** link opens this page in your browser.
+You can support development on [Ko-fi](https://ko-fi.com/felixlorenz).
+
+Found a bug or have an idea? [Open a GitHub issue](https://github.com/felix-lorenz/brewvisual/issues). Include your BrewVisual, macOS, and Homebrew versions, steps to reproduce the problem, and relevant command output. Remove personal information before sharing screenshots or logs.
 
 ## About this repository
 
-This public repository provides product documentation, screenshots, release notes, and distribution archives. The source repository is private.
+This repository provides BrewVisual documentation, screenshots, release notes, and downloads. The source code is private.
 
 BrewVisual is an independent app and is not affiliated with or endorsed by the Homebrew project.
