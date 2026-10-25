@@ -20,7 +20,7 @@ Prefer a direct download? Get the ZIP from the [latest release](https://github.c
 
 ## Features
 
-- **A curated app catalog.** Discover popular apps and browse organized categories without having to know package names. [(powered by Caskflow)](https://github.com/alielsokary/CaskFlow)
+- **A curated app catalog.** Discover popular apps and browse organized categories without having to know package names. Cask metadata powered by [CaskFlow](https://github.com/alielsokary/CaskFlow)
 - **Search beyond the catalog.** Search Homebrew formulae and casks, including software from taps you have added, and install supported packages directly.
 - **Manage apps and tools.** Install, update, remove, and pin packages from a native macOS interface.
 - **Keep updates in view.** Check at launch or on a configurable schedule, see available updates in the menu bar, and choose individual or bulk upgrades.
