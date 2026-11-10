@@ -33,9 +33,9 @@ Prefer a direct download? Get the ZIP from the [latest release](https://github.c
 
 ## Screenshots
 
-![BrewVisual 0.13.0 inline package details](assets/screenshots/dashboard.png?v=12588a9512ef)
+![BrewVisual 0.17.0 app catalog](assets/screenshots/dashboard.png?v=96f8eb9c452c)
 
-*Package details and installation in BrewVisual 0.13.0.*
+*App catalog in BrewVisual 0.17.0.*
 
 <img src="assets/screenshots/menu-bar-icon.png?v=b2a34709da2f" alt="BrewVisual menu-bar icon showing eight available updates" width="35" height="30">
 
