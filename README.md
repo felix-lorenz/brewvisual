@@ -12,18 +12,18 @@ Find popular apps in a clear, curated catalog, or explore Homebrew’s wider sel
 brew install --cask felix-lorenz/tap/brewvisual
 ```
 
-**Requirements:** macOS 27 or later · Apple Silicon · Homebrew
+**Requirements:** macOS 26 or later · Apple Silicon · Homebrew
 
 BrewVisual is available in English and German. Published downloads are signed with an Apple Developer ID certificate and notarized by Apple.
 
-Prefer a direct download? Get the ZIP from the [latest release](https://github.com/felix-lorenz/brewvisual/releases/latest), extract it, and move `BrewVisual.app` to Applications.
+Prefer a direct download? [Download the DMG](https://github.com/felix-lorenz/brewvisual/releases/latest/download/BrewVisual.dmg), open it, and drag `BrewVisual.app` to Applications.
 
 ## Features
 
 - **A curated app catalog.** Discover popular apps and browse organized categories without having to know package names. Cask metadata powered by [CaskFlow](https://github.com/alielsokary/CaskFlow)
 - **Search beyond the catalog.** Search Homebrew formulae and casks, including software from taps you have added, and install supported packages directly.
 - **Manage apps and tools.** Install, update, remove, and pin packages from a native macOS interface.
-- **Keep updates in view.** Check at launch or on a configurable schedule, see available updates in the menu bar, and choose individual or bulk upgrades.
+- **Control updates.** Schedule checks, see available updates in the menu bar, and choose individual or bulk upgrades. Optionally enable automatic formula updates and pause Homebrew updates for apps with their own updater.
 - **Homebrew logs always within reach.** Follow live command output and inspect recent operations in Activity.
 - **Tap support.** Add and remove third-party taps and browse packages from your added sources.
 - **Adopt existing apps.** Bring supported apps already on your Mac under Homebrew management.
@@ -32,10 +32,6 @@ Prefer a direct download? Get the ZIP from the [latest release](https://github.c
 - **No tracking or telemetry.** BrewVisual collects no usage analytics and disables Homebrew analytics for commands it starts.
 
 ## Screenshots
-
-![BrewVisual 0.17.0 app catalog](assets/screenshots/dashboard.png?v=96f8eb9c452c)
-
-*App catalog in BrewVisual 0.17.0.*
 
 <img src="assets/screenshots/menu-bar-icon.png?v=b2a34709da2f" alt="BrewVisual menu-bar icon showing eight available updates" width="35" height="30">
 
