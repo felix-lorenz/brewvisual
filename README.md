@@ -2,7 +2,7 @@
 
 <h3 align="center">A native Homebrew GUI for macOS — built for casual users and power users alike.</h3>
 
-![BrewVisual 0.13.0 app catalog](assets/screenshots/catalog-overview.png?v=09cfec39d987)
+![BrewVisual 0.17.0 app catalog](assets/screenshots/dashboard.png?v=96f8eb9c452c)
 
 Find popular apps in a clear, curated catalog, or explore Homebrew’s wider selection of apps, command-line tools, and libraries. Manage your software from one place, with package details, tap support, and Homebrew logs always within reach.
 
