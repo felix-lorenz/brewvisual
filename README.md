@@ -1,10 +1,10 @@
 # BrewVisual
 
-<h3 align="center">A native Homebrew GUI for macOS — built for casual users and power users alike.</h3>
+<h3 align="center">Your Homebrew apps, tools, and updates — in one native Mac app.</h3>
 
 ![BrewVisual 0.17.0 app catalog](assets/screenshots/dashboard.png?v=96f8eb9c452c)
 
-Find popular apps in a clear, curated catalog, or explore Homebrew’s wider selection of apps, command-line tools, and libraries. Manage your software from one place, with package details, tap support, and Homebrew logs always within reach.
+See what’s installed and what needs updating. Install, upgrade, and remove Homebrew apps and command-line tools, with scheduled update checks and available updates in the menu bar.
 
 ## Install
 
@@ -20,16 +20,13 @@ Prefer a direct download? [Download the DMG](https://github.com/felix-lorenz/bre
 
 ## Features
 
-- **A curated app catalog.** Discover popular apps and browse organized categories without having to know package names. Cask metadata powered by [CaskFlow](https://github.com/alielsokary/CaskFlow)
-- **Search beyond the catalog.** Search Homebrew formulae and casks, including software from taps you have added, and install supported packages directly.
-- **Manage apps and tools.** Install, update, remove, and pin packages from a native macOS interface.
 - **Control updates.** Schedule checks, see available updates in the menu bar, and choose individual or bulk upgrades. Optionally enable automatic formula updates and pause Homebrew updates for apps with their own updater.
-- **Homebrew logs always within reach.** Follow live command output and inspect recent operations in Activity.
-- **Tap support.** Add and remove third-party taps and browse packages from your added sources.
-- **Adopt existing apps.** Bring supported apps already on your Mac under Homebrew management.
+- **Manage apps and tools.** Install, remove, and pin packages, or bring compatible apps already on your Mac under Homebrew management.
 - **Maintenance with a preview.** Inspect estimated storage use, run Homebrew diagnostics, and review cleanup candidates before confirming cleanup.
+- **Discover apps and search Homebrew.** Browse a curated app catalog and search Homebrew apps, command-line tools, and libraries, including packages from your added taps. Catalog metadata is powered by [CaskFlow](https://github.com/alielsokary/CaskFlow).
+- **Manage third-party sources.** Add and remove taps and browse packages from your added sources.
+- **Homebrew logs always within reach.** Follow live command output and inspect recent operations in Activity.
 - **Homebrew setup included.** If Homebrew is missing, first-run setup can install it for you.
-- **No tracking or telemetry.** BrewVisual collects no usage analytics and disables Homebrew analytics for commands it starts.
 
 ## Screenshots
 
