@@ -2,7 +2,7 @@
 
 <h3 align="center">Your Homebrew apps, tools, and updates — in one native Mac app.</h3>
 
-[![BrewVisual updating five apps from the menu bar](assets/demo/brewvisual-menu-bar-demo.gif?v=cde66d46636e)](https://brewvisual.app/#demo)
+[![BrewVisual app catalog followed by five app updates from the menu bar](assets/demo/brewvisual-menu-bar-demo.gif?v=e9b635e90fa1)](https://brewvisual.app/#demo)
 
 [Watch the full 78-second demo](https://brewvisual.app/#demo)
 
