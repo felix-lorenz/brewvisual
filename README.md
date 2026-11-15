@@ -2,7 +2,9 @@
 
 <h3 align="center">Your Homebrew apps, tools, and updates — in one native Mac app.</h3>
 
-![BrewVisual 0.17.0 app catalog](assets/screenshots/dashboard.png?v=96f8eb9c452c)
+[![BrewVisual updating five apps from the menu bar](assets/demo/brewvisual-menu-bar-demo.gif?v=cde66d46636e)](https://brewvisual.app/#demo)
+
+[Watch the full 78-second demo](https://brewvisual.app/#demo)
 
 See what’s installed and what needs updating. Install, upgrade, and remove Homebrew apps and command-line tools, with scheduled update checks and available updates in the menu bar.
 
