@@ -1,0 +1,50 @@
+name: Update download badge
+
+on:
+  release:
+    types: [published, deleted]
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: download-badge
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Count DMG and ZIP downloads
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+
+          # Include every published release, including betas, and follow all pages.
+          download_count="$(gh api --paginate --slurp "repos/$GITHUB_REPOSITORY/releases?per_page=100" | jq '[.[][] | select(.draft == false) | .assets[] | select(.name | test("\\.(dmg|zip)$"; "i")) | .download_count] | add // 0')"
+          badge_json="$(jq -n --arg count "$download_count" '{schemaVersion: 1, label: "downloads", message: $count, color: "F2BD57"}')"
+
+          badge_path="assets/badges/downloads.json"
+          existing="$(gh api --method GET "repos/$GITHUB_REPOSITORY/contents/$badge_path" -f ref="$TARGET_BRANCH")"
+          current_json="$(jq -r '.content' <<< "$existing" | base64 --decode)"
+
+          # Avoid commits when the count has not changed.
+          if [[ "$(jq -Sc . <<< "$current_json")" == "$(jq -Sc . <<< "$badge_json")" ]]; then
+            echo "Download count is unchanged ($download_count)."
+            exit 0
+          fi
+
+          encoded_content="$(printf '%s\n' "$badge_json" | base64 -w 0)"
+          gh api --method PUT "repos/$GITHUB_REPOSITORY/contents/$badge_path" \
+            -f branch="$TARGET_BRANCH" \
+            -f sha="$(jq -r '.sha' <<< "$existing")" \
+            -f message="docs: update DMG and ZIP download count" \
+            -f content="$encoded_content" \
+            --jq '.commit.html_url'

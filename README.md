@@ -2,6 +2,12 @@
 
 <h3 align="center">Your Homebrew apps, tools, and updates — in one native Mac app.</h3>
 
+<p align="center">
+  <a href="https://github.com/felix-lorenz/brewvisual/releases/latest"><img src="https://img.shields.io/github/v/release/felix-lorenz/brewvisual?label=release&amp;color=F2BD57" alt="Latest stable release"></a>
+  <a href="#install"><img src="https://img.shields.io/badge/macOS-26%2B-808080?logo=apple&amp;logoColor=white" alt="Requires macOS 26 or later"></a>
+  <a href="https://github.com/felix-lorenz/brewvisual/releases"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffelix-lorenz%2Fbrewvisual%2Fmain%2Fassets%2Fbadges%2Fdownloads.json" alt="Total DMG and ZIP downloads across all releases" title="DMG and ZIP downloads across all releases, including betas; updated every six hours"></a>
+</p>
+
 [![BrewVisual app catalog followed by five app updates from the menu bar](assets/demo/brewvisual-menu-bar-demo.gif?v=0a44152c908e)](https://brewvisual.app/#demo)
 
 [Watch the full 78-second demo](https://brewvisual.app/#demo)
